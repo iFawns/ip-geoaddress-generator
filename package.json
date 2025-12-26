@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "next dev --turbopack -H 0.0.0.0 -p 5000",
     "build": "next build",
-    "build:cf": "pnpm dlx @cloudflare/next-on-pages@1",
+    "build:cf": "npx @cloudflare/next-on-pages@1",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "echo \"postinstall: run pnpm dlx @cloudflare/next-on-pages@1 when deploying to Pages if needed\""
+    "postinstall": "echo \"postinstall: run npx @cloudflare/next-on-pages@1 when deploying to Pages if needed\""
   },
   "engines": {
     "node": ">=18"
