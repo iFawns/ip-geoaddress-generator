@@ -2,11 +2,17 @@
   "name": "ip-geoaddress-generator",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack -H 0.0.0.0 -p 5000",
     "build": "next build",
+    "build:cf": "pnpm dlx @cloudflare/next-on-pages@1",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "echo \"postinstall: run pnpm dlx @cloudflare/next-on-pages@1 when deploying to Pages if needed\""
+  },
+  "engines": {
+    "node": ">=18"
   },
   "dependencies": {
     "@cemalgnlts/mailjs": "^3.0.1",
@@ -32,6 +38,5 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  },
-  "type": "module"
+  }
 }
